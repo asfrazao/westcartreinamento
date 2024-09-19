@@ -88,7 +88,7 @@ textarea {
 
 /* Background for hero section with local image */
 .hero {
-  background: url('../img/city1.jpg') no-repeat center center;
+  background: url('../img/city.jpg') no-repeat center center;
   background-size: cover;
   height: 500px;
   display: flex;
@@ -141,46 +141,61 @@ textarea {
   font-size: 1.2em;
 }
 
-/* Contact section */
-.contact-section {
-  padding: 40px;
-  background-color: #f8f9fa;
+/* Responsiveness for smaller screens */
+@media only screen and (max-width: 768px) {
+  .differential-item {
+    width: 45%;
+    margin-bottom: 20px;
+  }
 }
 
-.contact-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
+@media only screen and (max-width: 500px) {
+  .differential-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
+  /* Contact section */
+  .contact-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+  }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-.contact-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-}
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
-/* Footer */
-footer {
-  background-color: #343a40;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+  }
 }
