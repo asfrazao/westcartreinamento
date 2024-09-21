@@ -27,17 +27,15 @@ header {
   background: transparent; /* Fundo do menu transparente */
   padding: 20px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Espaça o logo e o menu */
   align-items: center;
-  position: absolute; /* Deixa o menu sobreposto ao conteúdo da página */
+  position: relative; /* Menu sempre visível */
   width: 100%;
   z-index: 10; /* Garante que o menu fique acima dos outros elementos */
 }
 
 header .logo {
-  position: absolute;
-  left: 20px;
-  top: 10px;
+  padding-left: 20px;
 }
 
 header .logo img {
@@ -56,10 +54,11 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: flex-end;
 }
 
 nav ul li {
-  margin: 0 20px; /* Espaçamento maior entre os itens do menu */
+  margin: 0 20px; /* Espaçamento entre os itens do menu */
 }
 
 nav ul li a {
@@ -67,20 +66,6 @@ nav ul li a {
   font-size: 1.1em;
   color: #333;
   font-weight: 500;
-}
-
-/* Botão "Trabalhe Conosco" */
-.cta-button {
-  background-color: #002d72;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 1em;
-  color: white;
-  text-decoration: none;
-}
-
-.cta-button:hover {
-  background-color: #0048a0;
 }
 
 /* Hero Section */
@@ -97,17 +82,18 @@ nav ul li a {
   color: white;
 }
 
+/* Estilo base para títulos no PC */
 .hero h1 {
+  margin-top:  -300px;
   font-family: 'Pacifico', cursive;
-  font-size: 3em;
-  margin: 0;
+  font-size: 6em; /* Ajustado para ser maior no PC */
   color: #cfb60e;
 }
 
 .hero h2 {
+  margin-top:  -30px;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5em;
-  margin: 10px 0 20px;
+  font-size: 2.5em;
   color: #cfb60e;
 }
 
@@ -117,6 +103,7 @@ nav ul li a {
   color: #fff;
 }
 
+/* Botão do Hero */
 .cta-button-hero {
   background-color: #25D366;
   padding: 15px 30px;
@@ -131,6 +118,39 @@ nav ul li a {
 
 .cta-button-hero:hover {
   background-color: #20b75d;
+}
+
+/* Media queries para ajuste de tamanhos em tablets */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3em; /* Ajustado para tablets */
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* Media queries para ajuste de tamanhos em celulares */
+@media (max-width: 480px) {
+  header {
+    margin-bottom: 0px; /* Reduz o espaçamento inferior do cabeçalho */
+  }
+
+  .hero {
+    padding-top: 0px; /* Remove qualquer padding superior da seção hero */
+    margin-top: -10px; /* Ajusta a margem superior da seção hero */
+  }
+
+  .hero h1 {
+    font-size: 3em; /* Ajustado para celulares */
+    padding-top: -50px;
+    margin-top:  -300px;
+  }
+
+  .hero h2 {
+    font-size: 1.2em;
+  }
 }
 
 /* Diferentials Section */
@@ -172,6 +192,22 @@ nav ul li a {
 
 /* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  header .logo {
+    position: static; /* Remove o posicionamento absoluto em telas menores */
+    margin-bottom: 10px;
+  }
+
   .differential-item {
     width: 45%; /* Em telas menores, dois itens por linha */
   }
@@ -180,6 +216,15 @@ nav ul li a {
 @media (max-width: 500px) {
   .differential-item {
     width: 100%; /* Em telas muito pequenas, um item por linha */
+  }
+
+  header .logo img {
+    max-width: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
   }
 }
 
