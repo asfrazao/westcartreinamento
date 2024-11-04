@@ -1,0 +1,89 @@
+<!-- header.html -->
+<link rel="stylesheet" href="../css/header.css"> <!-- Adicionando o CSS específico do cabeçalho -->
+
+<header id="main-header">
+  <div class="top-bar">
+    <div class="phones">Ligue: 11 98101-7198</div>
+  </div>
+  <nav>
+    <button class="navbar-toggler" onclick="toggleMenu()">
+      <span class="navbar-toggler-icon">☰</span>
+    </button>
+    <ul>
+      <li class="nav-item"><a href="index.html">Início</a></li>
+      <li class="nav-item"><a href="AulasParaHabilitados.html">Aulas para Habilitados</a></li>
+      <li class="nav-item"><a href="SobreNos.html">Sobre Nós</a></li>
+      <li class="nav-item"><a href="index.html#testimonials" id="testimonial-link">Depoimentos</a></li>
+      <li class="nav-item"><a href="index.html#contact" id="contact-link">Contato</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/westcar.23/" target="_blank" rel="noopener noreferrer">
+        <img src="../img/InstagramIcon.png" alt="Instagram">
+      </a>
+      <a href="https://g.co/kgs/D9eTgvQ" target="_blank" rel="noopener noreferrer">
+        <img src="../img/googleIcon.png" alt="Google">
+      </a>
+      <a href="https://wa.me/551198101-7198" target="_blank" rel="noopener noreferrer">
+        <img src="../img/whatsappIcon.png" alt="WhatsApp">
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Definindo a função toggleMenu globalmente para ser usada em qualquer página
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    if (navMenu) {
+      navMenu.classList.toggle('show');
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Configurar navegação para os links de Depoimentos e Contato
+    const testimonialLink = document.getElementById('testimonial-link');
+    const contactLink = document.getElementById('contact-link');
+
+    if (testimonialLink) {
+      testimonialLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita o comportamento padrão do link
+
+        // Redirecionar ou rolar até a seção de depoimentos
+        if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+          const testimonialSection = document.getElementById('testimonials');
+          if (testimonialSection) {
+            testimonialSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          window.location.href = 'index.html#testimonials';
+        }
+        toggleMenu(); // Fechar o menu depois de clicar no link
+      });
+    }
+
+    if (contactLink) {
+      contactLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita o comportamento padrão do link
+
+        // Redirecionar ou rolar até a seção de contato
+        if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          window.location.href = 'index.html#contact';
+        }
+        toggleMenu(); // Fechar o menu depois de clicar no link
+      });
+    }
+  });
+</script>
+<script>
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    if (navMenu) {
+      navMenu.classList.toggle('show');
+    }
+  }
+</script>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Westcar Treinamento oferece aulas de direção para habilitados, trazendo segurança e confiança para motoristas.">
+  <meta name="keywords" content="direção, habilitados, aulas de direção, Westcar, treinamento">
+  <meta name="author" content="Westcar Treinamento">
+  <meta property="og:title" content="Westcar Treinamento - Sua Liberdade">
+  <meta property="og:description" content="Aulas de direção para habilitados, garantindo confiança e liberdade no trânsito.">
+  <meta property="og:image" content="img/PlacaWest.png">
+  <meta property="og:url" content="http://westcartreinamento.com.br">
+  <link rel="stylesheet" href="css/style.css"> <!-- Importação do CSS externo -->
+  <title>Westcar Treinamento - Sua Liberdade</title>
+</head>
+<body>
+
+<!-- Barra superior com números de telefone -->
+<!-- Cabeçalho com logo e menu -->
+<header id="main-header">
+  <div class="top-bar">
+    <div class="phones">Ligue: 11 98101-7198</div>
+  </div>
+  <nav>
+    <button class="navbar-toggler" onclick="toggleMenu()">
+      <span class="navbar-toggler-icon">☰</span>
+    </button>
+    <ul>
+      <li class="nav-item"><a href="#home">Início</a></li>
+      <li class="nav-item"><a href="#services">Aula para Habilitados</a></li>
+      <li class="nav-item"><a href="#about">Sobre Nós</a></li>
+      <li class="nav-item"><a href="#testimonials">Depoimentos</a></li>
+      <li class="nav-item"><a href="#contact">Contato</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/westcar.23/" target="_blank" rel="noopener noreferrer">
+        <img src="img/InstagramIcon.png" alt="Instagram">
+      </a>
+      <a href="https://g.co/kgs/D9eTgvQ" target="_blank" rel="noopener noreferrer">
+        <img src="img/googleIcon.png" alt="Google">
+      </a>
+      <a href="https://wa.me/551198101-7198" target="_blank" rel="noopener noreferrer">
+        <img src="img/whatsappIcon.png" alt="WhatsApp">
+      </a>
+    </div>
+  </nav>
+</header>
+<script>
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.toggle('show');
+  }
+</script>
+ <!-- Hero section with background image and text -->
+<section class="hero">
+  <div>
+    <h1>Voltando a Dirigir</h1>
+    <h2>Escola para habilitados</h2>
+    <p>Sua Liberdade<br>Na palma da mão</p>
+    <a href="#contact" class="cta-button-hero">Saiba Mais</a>
+  </div>
+</section>
+
+<!-- Differentials Section -->
+<section class="differentials">
+  <h2>Diferenciais</h2>
+  <div class="differential-list">
+    <div class="differential-item">
+      <img src="https://img.icons8.com/ios-filled/100/car.png" alt="Atendimento a Domicílio">
+      <h3>Atendimento a Domicílio</h3>
+      <p>Escolha o melhor local e horário para suas aulas de direção. Nós vamos até você.</p>
+    </div>
+    <div class="differential-item">
+      <img src="https://img.icons8.com/ios-filled/100/car.png" alt="Metodologia Diferenciada">
+      <h3>Metodologia Diferenciada</h3>
+      <p>Nossa metodologia é desenvolvida para você ganhar confiança e dirigir com tranquilidade.</p>
+    </div>
+    <div class="differential-item">
+      <img src="https://img.icons8.com/ios-filled/100/car--v1.png" alt="Veículos Preparados">
+      <h3>Veículos Preparados</h3>
+      <p>Oferecemos veículos totalmente adaptados para proporcionar o máximo de segurança e conforto.</p>
+    </div>
+    <div class="differential-item">
+      <img src="https://img.icons8.com/ios-filled/100/driving.png" alt="Instrutores Credenciados">
+      <h3>Instrutores Credenciados</h3>
+      <p>Nossos instrutores são credenciados pelo DETRAN e possuem vasta experiência.</p>
+    </div>
+    <div class="differential-item">
+      <img src="https://img.icons8.com/ios-filled/100/driving.png" alt="Aulas 100% Práticas">
+      <h3>Aulas 100% Práticas</h3>
+      <p>As aulas são práticas desde o início, permitindo que você aprenda a dirigir com confiança.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+  <h2>Depoimentos de Nossos Alunos</h2>
+  <div class="testimonial">
+    <p>"Depois de tentar em outros lugares, aqui encontrei a confiança que precisava para dirigir. Obrigado, Westcar!"</p>
+    <span>- Maria Silva</span>
+  </div>
+  <div class="testimonial">
+    <p>"Excelente método de ensino, super recomendo para quem tem medo de dirigir."</p>
+    <span>- João Souza</span>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2>Entre em Contato</h2>
+  <form class="contact-form">
+    <input type="email" placeholder="Coloque seu Email" required>
+    <input type="text" placeholder="Qual a sua dúvida" required>
+    <textarea placeholder="Deixe seu contato WhatsApp"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Westcar Treinamento - Todos os direitos reservados</p>
+  <div class="social-links">
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img src="img/InstagramIcon.png" alt="Instagram"></a>
+    <a href="https://g.co/kgs/D9eTgvQ" target="_blank" rel="noopener noreferrer"><img src="img/googleIcon.png" alt="Google"></a>
+    <a href="https://api.whatsapp.com/send?phone=5511981017198" target="_blank" rel="noopener noreferrer"><img src="img/whatsappIcon.png" alt="WhatsApp"></a>
+  </div>
+</footer>
+
+<!-- Componente de chat flutuante para WhatsApp -->
+<div class="chat-popup" onclick="openWhatsApp()">
+  <img src="img/atendente.png" alt="Imagem do Assistente">
+  <div class="message">
+    Olá, vamos perder o <strong>Medo de Dirigir?</strong>
+  </div>
+  <div class="online-status"></div>
+</div>
+
+<script>
+  function openWhatsApp() {
+    window.open('https://api.whatsapp.com/send?phone=5511975773755&text=Olá,%20tenho%20interesse%20nas%20aulas%20de%20direção!', '_blank');
+  }
+
+  // Função para alterar o fundo do cabeçalho ao rolar a página
+  window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+      header.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+      header.style.color = '#333';
+    } else {
+      header.style.backgroundColor = 'transparent';
+      header.style.color = '#fff';
+    }
+  });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

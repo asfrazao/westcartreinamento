@@ -1,0 +1,35 @@
+
+<!-- body.html -->
+<!-- Importando o cabeçalho -->
+<div id="header-container"></div>
+
+<!-- Seção específica de cada página será inserida aqui -->
+<div id="page-content"></div>
+
+<!-- Componente de chat flutuante para WhatsApp -->
+<div class="chat-popup" onclick="openWhatsApp()">
+  <img src="../img/atendente.png" alt="Imagem do Assistente">
+  <div class="message">
+    Olá, vamos perder o <strong>Medo de Dirigir?</strong>
+  </div>
+  <div class="online-status"></div>
+</div>
+
+<script>
+  // Função para carregar o conteúdo dos arquivos HTML no contêiner correspondente
+  function loadHTML(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+  }
+
+  // Carregar o cabeçalho do diretório "components"
+  loadHTML('header-container', '../components/header.html');
+
+  // Função para abrir o WhatsApp
+  function openWhatsApp() {
+    window.open('https://api.whatsapp.com/send?phone=5511981017198&text=Olá,%20tenho%20interesse%20nas%20aulas%20de%20direção!', '_blank');
+  }
+</script>
