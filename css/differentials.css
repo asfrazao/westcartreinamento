@@ -1,0 +1,63 @@
+
+/* differentials.css */
+/* Estilos para a seção de diferenciais */
+
+.differentials {
+  padding: 30px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.differentials h2 {
+  font-size: 2.2em;
+  color: #584F52;
+  margin-bottom: 20px;
+}
+
+.differential-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.differential-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.differential-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.differential-item img {
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+.differential-item h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #25D366;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .differential-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .differentials h2 {
+    font-size: 1.8em;
+  }
+}

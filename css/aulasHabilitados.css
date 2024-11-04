@@ -1,0 +1,34 @@
+body {
+  background: url('../img/blurCity.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #584F52;
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(214, 212, 208, 0.7);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #474646;
+}
+
+.content h2 {
+  font-size: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  color: #584F52;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #584F52;
+}

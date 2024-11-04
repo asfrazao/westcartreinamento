@@ -1,0 +1,86 @@
+body {
+  background: url('../img/blurCity.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #584F52;
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(88, 79, 82, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #f39c12;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ecf0f1;
+}
+
+.gallery {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #EF7D34;
+}
+
+.gallery-container {
+  position: relative;
+  height: 600px; /* Altura da área de exibição da imagem */
+  margin-left: -10px; /* Altere este valor para ajustar a posição à esquerda */
+}
+
+.gallery-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  margin: auto;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.gallery-item.visible {
+  display: block;
+  opacity: 1;
+}
+
+.gallery-item img {
+  width: 150%;
+  height: 100%;
+  margin-left: -100px;
+  max-height: 600px;
+  max-width: 1000px;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item p {
+  padding-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}

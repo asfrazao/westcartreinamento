@@ -1,0 +1,12 @@
+
+/* main.css */
+/* Importação dos arquivos CSS modularizados */
+
+@import 'global.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'hero.css';
+@import 'differentials.css';
+@import 'testimonials.css';
+@import 'contact.css';
+@import 'chat-popup.css';

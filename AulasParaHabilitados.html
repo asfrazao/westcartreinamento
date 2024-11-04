@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/aulasHabilitados.css">
+  <title>Aulas para Habilitados - Westcar Treinamento</title>
+</head>
+<body>
+
+<!-- Importando o conteúdo comum do body -->
+<div id="body-container"></div>
+
+<script>
+  // Função para carregar o conteúdo dos arquivos HTML no contêiner correspondente
+  function loadHTML(id, file, callback) {
+    fetch(file)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+        if (callback) callback();
+      })
+      .catch(error => {
+        console.error(`Erro ao carregar o arquivo ${file}:`, error);
+      });
+  }
+
+  // Carregar o body, menu e rodapé, e depois inserir o conteúdo específico da página
+  document.addEventListener('DOMContentLoaded', function() {
+    loadHTML('body-container', 'body.html', function() {
+      // Conteúdo específico da página, carregado após o body
+      const pageContent = `
+        <section class="content">
+          <h1>Aulas para Habilitados</h1>
+          <p>As aulas para habilitados da Westcar são ideais para quem já possui a carteira de motorista, mas deseja ganhar confiança ao dirigir. Nossa equipe de instrutores é altamente qualificada para ajudar você a vencer o medo e dominar o volante com segurança.</p>
+
+          <h2>Transforme seu medo em confiança ao volante</h2>
+          <p>Muitos motoristas, mesmo após conquistar a habilitação, enfrentam desafios que tornam dirigir uma experiência estressante. Nessas situações, as aulas para habilitados desempenham um papel fundamental: elas não só ajudam a superar obstáculos do dia a dia no trânsito, como também desenvolvem habilidades essenciais e, principalmente, devolvem a confiança necessária para dirigir com segurança.</p>
+
+          <h2>WestCar: Sua parceira para dominar o trânsito</h2>
+          <p>Na WestCar, nossa missão é simples e clara: transformar a insegurança em segurança total ao volante. Oferecemos aulas práticas no trânsito real, conduzidas por instrutores credenciados pelo Detran, para garantir que você aperfeiçoe suas habilidades e enfrente qualquer situação com tranquilidade. Se você procura mais confiança e controle ao dirigir, conte conosco para fazer a diferença.</p>
+        </section>
+      `;
+      // Adiciona o conteúdo específico dentro do 'body-container'
+      const bodyContainerElement = document.getElementById('body-container');
+      if (bodyContainerElement) {
+        bodyContainerElement.innerHTML += pageContent;
+      } else {
+        console.error("Elemento 'body-container' não encontrado.");
+      }
+    });
+
+    // Carregar o menu
+    loadHTML('menu-container', 'components/header.html');
+
+    // Carregar o rodapé
+    loadHTML('footer-container', 'components/footer.html');
+
+  });
+</script>
+<script>
+  // Definindo a função toggleMenu globalmente para ser usada em qualquer página
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    if (navMenu) {
+      navMenu.classList.toggle('show');
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const hash = window.location.hash;
+
+    // Função para rolar até a seção específica
+    function scrollToSection(sectionId) {
+      setTimeout(function() {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // Pequeno atraso para garantir que a seção seja carregada
+    }
+
+    if (hash === "#testimonials") {
+      scrollToSection('testimonials');
+    } else if (hash === "#contact") {
+      scrollToSection('contact');
+    }
+  });
+</script>
+
+<!-- Contêineres para o menu e rodapé -->
+<div id="menu-container"></div>
+<div id="footer-container"></div>
+
+</body>
+</html>

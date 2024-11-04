@@ -1,0 +1,32 @@
+
+/* testimonials.css */
+/* Estilos para a seção de depoimentos */
+
+.testimonials-section {
+  padding: 30px;
+  background-color: #D6D4D0;
+  color: #584F52;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  max-width: 90%;
+  margin: 20px auto;
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #0044cc;
+}

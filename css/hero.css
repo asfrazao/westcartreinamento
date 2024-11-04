@@ -1,0 +1,67 @@
+
+/* hero.css */
+/* Estilos para a seção "hero" */
+
+.hero {
+  background: url('../img/city1.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 6em;
+  color: #EF7D34;
+  transform: translateY(-100px);
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  color: #584F52;
+  transform: translateY(-130px);
+}
+
+.hero p {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  color: #584F52;
+  transform: translateY(-100px);
+}
+
+.cta-button-hero {
+  background-color: #25D366;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+  transform: translateY(-100px);
+}
+
+.cta-button-hero:hover {
+  background-color: #20b75d;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3em;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 1.5em;
+  }
+}

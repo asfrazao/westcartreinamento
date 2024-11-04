@@ -1,86 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Westcar Treinamento oferece aulas de direção para habilitados, trazendo segurança e confiança para motoristas.">
+  <meta name="keywords" content="direção, habilitados, aulas de direção, Westcar, treinamento">
+  <meta name="author" content="Westcar Treinamento">
+  <meta property="og:title" content="Westcar Treinamento - Sua Liberdade">
+  <meta property="og:description" content="Aulas de direção para habilitados, garantindo confiança e liberdade no trânsito.">
+  <meta property="og:image" content="img/PlacaWest.png">
+  <meta property="og:url" content="http://westcartreinamento.com.br">
+  <link rel="stylesheet" href="css/main.css"> <!-- Importação do CSS modularizado -->
   <title>Westcar Treinamento - Sua Liberdade</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- Importação do CSS externo -->
 </head>
 <body>
 
-<!-- Barra superior com números de telefone -->
-<div class="top-bar">
-  <div class="phones">Ligue: 11 3876-7575 | 11 3881-7575 | 11 99281-1460</div>
-</div>
-
-<!-- Cabeçalho com logo e menu -->
-<header>
-  <div class="logo">
-    <img src="img/PlacaWest.png" alt="Logo Westcar Treinamento">
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#home">Início</a></li>
-      <li><a href="#services">Aula para Habilitados</a></li>
-      <li><a href="#about">Sobre Nós</a></li>
-      <li><a href="#testimonials">Depoimentos</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- Hero section with background image and text -->
-<section class="hero">
-  <div>
-    <h1>Voltando a Dirigir</h1>
-    <h2>Escola para habilitados</h2>
-    <p>Sua Liberdade<br>Na palma da mão</p>
-    <a href="#contact" class="cta-button-hero">Saiba Mais</a>
-  </div>
-</section>
-
-<!-- Differentials Section -->
-<section class="differentials">
-  <h2>Diferenciais</h2>
-  <div class="differential-list">
-    <div class="differential-item">
-      <img src="https://img.icons8.com/ios-filled/100/car.png" alt="Atendimento a Domicílio">
-      <h3>Atendimento a Domicílio</h3>
-    </div>
-    <div class="differential-item">
-      <img src="https://img.icons8.com/ios-filled/100/car.png" alt="Metodologia Diferenciada">
-      <h3>Metodologia Diferenciada</h3>
-    </div>
-    <div class="differential-item">
-      <img src="https://img.icons8.com/ios-filled/100/car--v1.png" alt="Veículos Adesivados">
-      <h3>Veículos Preparados</h3>
-    </div>
-    <div class="differential-item">
-      <img src="https://img.icons8.com/ios-filled/100/driving.png" alt="Instrutores Credenciados">
-      <h3>Instrutores Credenciados</h3>
-    </div>
-    <div class="differential-item">
-      <img src="https://img.icons8.com/ios-filled/100/driving.png" alt="Aulas 100% Práticas">
-      <h3>Aulas 100% Práticas</h3>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-  <h2>Entre em Contato</h2>
-  <form class="contact-form">
-    <input type="email" placeholder="Coloque seu Email" required>
-    <input type="text" placeholder="Qual a sua dúvida" required>
-    <textarea placeholder="Deixe seu contato WhatsApp"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2024 Westcar Treinamento - Todos os direitos reservados</p>
-</footer>
+<!-- Importando os componentes HTML -->
+<div id="header-container"></div>
+<div id="hero-container"></div>
+<div id="differentials-container"></div>
+<div id="testimonials-container"></div>
+<div id="contact-container"></div>
+<div id="footer-container"></div>
 
 <!-- Componente de chat flutuante para WhatsApp -->
 <div class="chat-popup" onclick="openWhatsApp()">
@@ -92,9 +34,116 @@
 </div>
 
 <script>
-  function openWhatsApp() {
-    window.open('https://api.whatsapp.com/send?phone=5511975773755&text=Olá,%20tenho%20interesse%20nas%20aulas%20de%20direção!', '_blank');
+  // Função para carregar o conteúdo dos arquivos HTML no contêiner correspondente
+  function loadHTML(id, file) {
+    fetch(file)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById(id).innerHTML = data;
+            });
   }
+
+  // Carregar os componentes do diretório "components"
+  loadHTML('header-container', 'components/header.html');
+  loadHTML('hero-container', 'components/hero.html');
+  loadHTML('differentials-container', 'components/differentials.html');
+  loadHTML('testimonials-container', 'components/testimonials.html');
+  loadHTML('contact-container', 'components/contact.html');
+  loadHTML('footer-container', 'components/footer.html');
+
+  // Definir a função toggleMenu globalmente
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    if (navMenu) {
+      navMenu.classList.toggle('show');
+    }
+  }
+
+  // Função para abrir o WhatsApp
+  function openWhatsApp() {
+    window.open('https://api.whatsapp.com/send?phone=5511981017198&text=Olá,%20tenho%20interesse%20nas%20aulas%20de%20direção!', '_blank');
+  }
+
+  // Navegação suave ao clicar nos links do menu
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.hash === "#testimonials") {
+      setTimeout(function() {
+        const testimonialSection = document.getElementById('testimonials');
+        if (testimonialSection) {
+          testimonialSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // Pequeno atraso para garantir que a seção seja carregada
+    }
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const hash = window.location.hash;
+
+    // Função para rolar até a seção específica
+    function scrollToSection(sectionId) {
+      setTimeout(function() {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // Pequeno atraso para garantir que a seção seja carregada
+    }
+
+    if (hash === "#testimonials") {
+      scrollToSection('testimonials');
+    } else if (hash === "#contact") {
+      scrollToSection('contact');
+    }
+  });
+</script>
+
+<script>
+  // Definindo a função toggleMenu globalmente para ser usada em qualquer página
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    if (navMenu) {
+      navMenu.classList.toggle('show');
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const hash = window.location.hash;
+
+    // Função para rolar até a seção específica
+    function scrollToSection(sectionId) {
+      setTimeout(function() {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // Pequeno atraso para garantir que a seção seja carregada
+    }
+
+    if (hash === "#testimonials") {
+      scrollToSection('testimonials');
+    } else if (hash === "#contact") {
+      scrollToSection('contact');
+    }
+  });
 </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

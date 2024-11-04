@@ -1,0 +1,66 @@
+
+/* chat-popup.css */
+/* Estilos para o componente de chat flutuante */
+
+.chat-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-popup:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chat-popup img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-popup .message {
+  max-width: 250px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.chat-popup .message strong {
+  font-weight: bold;
+}
+
+.chat-popup .online-status {
+  width: 10px;
+  height: 10px;
+  background-color: #25D366; /* Verde para indicar disponibilidade */
+  border-radius: 50%;
+  position: relative;
+  margin-left: 5px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .chat-popup {
+    bottom: 10px;
+    left: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chat-popup img {
+    margin: 0 0 10px 0;
+  }
+
+  .chat-popup .message {
+    text-align: center;
+  }
+}

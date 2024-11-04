@@ -1,0 +1,65 @@
+
+/* global.css */
+/* Estilos globais */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9; /* Fundo suave */
+}
+
+/* Ajustes gerais */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #3B52D9;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Botões primários e secundários */
+.button-primary {
+  background-color: #3B52D9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #2a3d99;
+}
+
+.button-secondary {
+  background-color: #EF7D34;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-secondary:hover {
+  background-color: #c65b28;
+}
